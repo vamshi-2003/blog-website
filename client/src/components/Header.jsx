@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <Navbar className='border-b-2 '>
       <Link to='/' className='self-centre whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white' >
-        <span className='px-2 py-1 bg-black rounded-tl-full text-white'>MERN</span>
-        <span className='px-2 py-1 bg-white rounded-br-full text-black'>Blog</span>
+      <span className='pl-2 py-1 bg-purple-900 border border-white rounded-tl-lg text-white '>MERN</span>
+      <span className='pr-2 py-1 bg-white border border-purple-900 rounded-br-lg text-purple-900 '>BLOG</span>
       </Link>
       <form>
         <TextInput
@@ -19,15 +19,17 @@ export default function Header() {
           className='hidden lg:inline'
         />
       </form>
-      <Button className=' lg:hidden' outline color='dark' pill>
-        <AiOutlineSearch />
+      <Button className=' lg:hidden border-black border-2'color='purple' pill>
+        <AiOutlineSearch className=' text-xl'/>
       </Button>
       <div className='flex gap-2 md:order-2'>
-        <Button className='h-9 hidden sm:inline' outline color='dark' pill >
-          <FaMoon />
+        {/* darkmode----------------------------- */}
+        <Button color='purple' className=' border-black border-2 hidden sm:inline'pill  >
+          <FaMoon className='text-xl'/>
         </Button>
-        <Link to='/SighIn'>
-          <Button outline color='dark' >
+        {/* sign in------------------------------------- */}
+        <Link to='/Signin'>
+          <Button className='border-black border-2' color='purple' >
             Sign In
           </Button>
         </Link>
