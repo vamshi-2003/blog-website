@@ -83,7 +83,7 @@ export default function SignUp() {
                 onChange={handleChange}
               />
             </div>
-            <Button color="purple" className=' border-black border' 
+            <Button color="purple" className=' border-black border-2' 
             type='submit' disabled={loading}>
               {loading ? (
                 <>
