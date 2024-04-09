@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <Navbar className='border-b-2 '>
       <Link to='/' className='self-centre whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white' >
-      <span className='pl-2 py-1 bg-purple-900 border border-white rounded-tl-lg text-white '>MERN</span>
-      <span className='pr-2 py-1 bg-white border border-purple-900 rounded-br-lg text-purple-900 '>BLOG</span>
+      <span className='pl-2 py-1 bg-purple-800 hover:bg-purple-950 border border-white rounded-tl-lg text-white '>MERN</span>
+      <span className='pr-2 py-1 bg-white border border-purple-800 hover:border-purple-950 rounded-br-lg text-purple-800 hover:text-purple-950 '>BLOG</span>
       </Link>
       <form>
         <TextInput
@@ -23,11 +23,9 @@ export default function Header() {
         <AiOutlineSearch className=' text-xl'/>
       </Button>
       <div className='flex gap-2 md:order-2'>
-        {/* darkmode----------------------------- */}
         <Button color='purple' className=' border-black border-2 hidden sm:inline'pill  >
           <FaMoon className='text-xl'/>
         </Button>
-        {/* sign in------------------------------------- */}
         <Link to='/Signin'>
           <Button className='border-black border-2' color='purple' >
             Sign In
