@@ -57,9 +57,21 @@ export default function Header() {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link active={path === "/" }as={'div'}><Link to='/'>Home</Link></Navbar.Link>
-        <Navbar.Link active={path === "/about"}as={'div'}><Link to='/about'>About</Link></Navbar.Link>
-        <Navbar.Link active={path === "/projects"}as={'div'}><Link to='/projects'>Projects</Link></Navbar.Link>
+        <Navbar.Link active={path === "/" }as={'div'}
+        className={` rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2  
+        ${path === '/' ? 'text-white bg-purple-800  md:text-xl md:border-black md:border-2 md:text-white md:bg-purple-800' : 'md:hover:text-xl md:hover:text-purple-950 md:hover:border-purple-950 md:hover:border-b-2 '
+        }`}
+        ><Link to='/'>Home</Link></Navbar.Link>
+        <Navbar.Link active={path === "/about"}as={'div'}
+        className={` rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 
+        ${path === '/about' ? 'text-white bg-purple-800  md:text-xl md:border-black md:border-2 md:text-white md:bg-purple-800' : 'md:hover:text-xl md:hover:text-purple-950 md:hover:border-purple-950 md:hover:border-b-2 '
+        }`}
+        ><Link to='/about'>About</Link></Navbar.Link>
+        <Navbar.Link active={path === "/projects"}as={'div'}
+        className={` rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 
+        ${path === '/projects' ? 'text-white bg-purple-800  md:text-xl md:border-black md:border-2 md:text-white md:bg-purple-800' : 'md:hover:text-xl md:hover:text-purple-950 md:hover:border-purple-950 md:hover:border-b-2 '
+        }`}
+        ><Link to='/projects'>Projects</Link></Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   )
